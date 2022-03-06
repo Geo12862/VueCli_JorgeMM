@@ -1,20 +1,20 @@
 <template>
-  <div class="home">
-    <Header msg=""/>
+  <div>
+    <BodyBlog msg=""/>
     <Footer msg=""/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from "@/components/Header";
 import Footer from "../components/Footer.vue";
+import BodyBlog from "../components/BodyBlog.vue";
 
 export default {
-  name: 'Home',
+  name: 'Blog',
   components: {
-    Header,
-    Footer
+    Footer,
+    BodyBlog
 }
 }
 </script>

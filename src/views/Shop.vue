@@ -11,10 +11,14 @@ import Header from "@/components/Header";
 import Footer from "../components/Footer.vue";
 
 export default {
-  name: 'Home',
-  components: {
+  name: "Shop",
+components: {
     Header,
     Footer
 }
 }
 </script>
+
+<style scoped>
+
+</style>
