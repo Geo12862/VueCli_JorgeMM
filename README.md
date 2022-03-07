@@ -19,7 +19,23 @@ Bootstrap
 - Footer
 
 ## UTILITATS
--
+### Aplicación de principios UX:
+- 11. Paleta de Colores y 2 fuentes, la de VUE y la Bootstrap por defecto
+- 21. Evitar cargar la interfície con contenido irrelevante o colores llamativos
+- 22. Lenguaje simple i adecuado al secotor de la web
+- 25. Uso de imagenes con calidad adecuada, en el carrusel del Home de 700 px todas, modificadas.
+- 51. Navegación intuitiva, gracias al Navrbar del Header
+- 
+### Aplicación de técnicas de Accesibilidad:
+- Links distinguibles al pasar por encima cambian el tipo de puntero.
+- Al pasar por encima, el puntero sera un dedo en vez de la tipica flecha, aplicado en los enlaces habilitados, tanto del Navbar como de los botones y enlaces.
+- Los links reaccionan, con cambio de color.
+- Uso de Headings, h1 para el título principal de las páginas, h4 para los títulos intermedios del body.
+- 
+### Performance
+![Taute]()
+### Accesibility
+![Taute](https://raw.githubusercontent.com/Geo12862/VueCli_JorgeMM/main/src/assets/images/Pruebas/Accesibility.png?token=GHSAT0AAAAAABQWORBSB23V4RXN4MBRNM5IYRPJVOA)
 
 ## CUSTOM
 - Customize estilo 'A'
