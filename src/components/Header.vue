@@ -4,51 +4,11 @@
             <h1>SOYUZ TMA-M</h1>
             <h3>SPACECRAFT</h3>
         </div>
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <h3 class="display-5 text-center text-white">Future Projects</h3>
-            <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="../assets/images/project-image1.jpg" class="d-block w-100 " alt="project-image1">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <img src="../assets/images/project-image2.jpg" class="d-block w-100 " alt="project-image2">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <img src="../assets/images/project-image3.jpg" class="d-block w-100" alt="project-image3">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <img src="../assets/images/project-image4.jpg" class="d-block w-100" alt="project-image4">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Fourd slide label</h5>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        <MDBCarousel
+            v-model="carousel1"
+            :items="items1"/>
         <div class="mt-2 text-center">
-            <button type="button" class="btn btn-secondary btn-lg" disabled>Read More</button>
+            <button type="button" class="btn btn-secondary btn-lg" disabled><router-link to="/about" class="btn btn-secondary btn-lg">Read More</router-link></button>
         </div>
     </div>
     <div class="container-fluid bg-secondary text-center text-white relleno">
@@ -131,12 +91,43 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import { MDBCarousel } from "mdb-vue-ui-kit";
 export default {
   name: "Header",
   props: {
     msg: String
-  }
+  },
+  components: {
+      MDBCarousel
+    },
+    setup() {
+      const items1 = [
+        {
+          src: "https://raw.githubusercontent.com/Geo12862/VueCli_JorgeMM/main/src/assets/nave-700.jpg?token=GHSAT0AAAAAABQWORBSPYZHVDS7OGCSOGX2YRPCK5Q",
+          alt: "..."
+        },
+        {
+          src: "https://raw.githubusercontent.com/Geo12862/VueCli_JorgeMM/main/src/assets/satelite1-700.jpg?token=GHSAT0AAAAAABQWORBS7OGP4KVKJBRF4JBGYRPCLHQ",
+          alt: "..."
+        },
+        {
+          src: "https://raw.githubusercontent.com/Geo12862/VueCli_JorgeMM/main/src/assets/galaxia-700.jpg?token=GHSAT0AAAAAABQWORBSRGICNSV6EHL2GBKGYRPCLVA",
+          alt: "..."
+        },
+        {
+          src: "https://raw.githubusercontent.com/Geo12862/VueCli_JorgeMM/main/src/assets/tierra2-700.jpg?token=GHSAT0AAAAAABQWORBSRPGDZIGCLWIA2642YRPCMPQ",
+          alt: "..."
+        }
+      ];
+      const carousel1 = ref(0);
+      return {
+        items1,
+        carousel1
+      };
+    }
 }
+
 </script>
 
 <style >
